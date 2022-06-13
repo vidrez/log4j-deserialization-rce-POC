@@ -15,7 +15,7 @@ At any point you can play with the source code by updating *src/main/java/HelloL
 
 Of course you are free to test the application however you want, I'll just show one simple way of doing it:
 
-**NOTE: If you encounter problems try to change the default java version used by your system, in Ubuntu/Linux you can use `update-alternatives --config java`, for the following steps I'll be using java-8-openjdk**
+**NOTE: If you encounter problems try to change the default java version used by your system, in Ubuntu/Linux you can use `update-alternatives --config java`, for the following steps I'll be using java-8-openjdk to generate the ysoserial payload and then switch back to java-18-openjdk**
 
 1. First we'll clone or download [pimps/ysoserial-modified](https://github.com/pimps/ysoserial-modified) and [pimps/JNDI-Exploit-Kit](https://github.com/pimps/JNDI-Exploit-Kit)
 2. Inside the ysoserial-modified folder we generate the serialized payload with the following command `java -jar target/ysoserial-modified.jar CommonsCollections6 bash 'mkdir /tmp/pwned' > payload.ser`. *mkidr /tmp/pwned* can be substituted with your own command
